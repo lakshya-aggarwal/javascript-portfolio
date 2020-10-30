@@ -10,6 +10,6 @@ The project plots a scatter plot from data points in a json file using the [AmCh
 
 This project uses npm for building. Common commands:
 
-From the root directory, run ``npm install`` to install all dependencies and prepare the development environment.
+From the webpack-demo directory, run ``npm install`` to install all dependencies and prepare the development environment.
 
-From the root directory, run ``npm run start`` to compile the webpack and start a webpack-dev-server instance with the project deployed.
+From the webpack-demo directory, run ``npm run start`` to compile the webpack and start a webpack-dev-server instance with the project deployed.
