@@ -2,7 +2,7 @@
 Repository of Javascript projects.
 
 
-## [Webpack-demo][https://github.com/lakshya-aggarwal/manufac/tree/main/webpack-demo]
+## [Webpack-demo](https://github.com/lakshya-aggarwal/manufac/tree/main/webpack-demo)
 
 This project uses Maven for building. Common commands:
 
