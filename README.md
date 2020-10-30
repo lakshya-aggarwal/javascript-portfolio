@@ -13,3 +13,5 @@ This project uses npm for building. Common commands:
 From the webpack-demo directory, run ``npm install`` to install all dependencies and prepare the development environment.
 
 From the webpack-demo directory, run ``npm run start`` to compile the webpack and start a webpack-dev-server instance with the project deployed.
+
+![Alt text](screenshots/webpack-demo.png?raw=true "Optional Title")
