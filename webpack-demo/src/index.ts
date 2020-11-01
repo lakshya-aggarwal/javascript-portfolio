@@ -78,12 +78,13 @@ label.marginRight = 100;
 label.y = 60;
 label.align = "right"
 label.toFront();
+label.fontWeight = "bold";
 
 reg.events.on("processed", function(ev) {
   let EQUATION_STRING = ev.target.result.string;
   let EQUATION_R2 = ev.target.result.r2;
-  label.text = `[bold]Equation:[/] ${EQUATION_STRING} 
-                [bold]R² :[/] ${EQUATION_R2} `;
+  label.text = `Equation:[/] ${EQUATION_STRING} 
+                R² :[/] ${EQUATION_R2} `;
 });
 
 //scrollbars
