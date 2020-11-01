@@ -1,3 +1,5 @@
+import './style.css';
+
 import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import * as am4plugins_regression from "@amcharts/amcharts4/plugins/regression";
@@ -20,7 +22,7 @@ chart.cursor.lineY.disabled = true;
 
 // Set up data source
 chart.dataSource.disableCache = true;
-chart.dataSource.url = "data/sample_data_serial.json";
+chart.dataSource.url = "sample_data_serial.json";
 chart.dataSource.parser = new am4core.JSONParser();
 chart.dataSource.parser.options.emptyAs = 0;
 
@@ -66,8 +68,8 @@ regseries.name = "Linear Regression";
 regseries.stroke = am4core.color("#ff0000");
 
 let reg = regseries.plugins.push(new am4plugins_regression.Regression());
-reg.simplify = true;
-reg.reorder = true;
+reg.simplify = true; // While having no effect on visual appearance of the trend line, using such simplification might give a serious performance boost on data-heavy charts
+reg.reorder = true;  // On scatter charts - where you have value axes on both X and Y - data points can come in any order. This might produce an odd-looking trend line. To fix that, you can use Regression's reorder setting
 
 var label = chart.tooltipContainer.createChild(am4core.Label);
 label.x = am4core.percent(100);
@@ -77,7 +79,7 @@ label.align = "right"
 label.toFront();
 
 reg.events.on("processed", function(ev) {
-  label.text = "[bold]Equation:[/] " + ev.target.result.string.replace(/\^2/, "²") + "\n[bold]R² :[/] " + ev.target.result.r2;
+  label.text = "[bold]Equation:[/] " + ev.target.result.string + "\n[bold]R² :[/] " + ev.target.result.r2;
 });
 
 //scrollbars

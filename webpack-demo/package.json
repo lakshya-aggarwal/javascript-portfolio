@@ -5,27 +5,24 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
     "start": "webpack serve",
-    "server": "node server.js",
     "build": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "express": "^4.17.1",
-    "html-webpack-plugin": "^4.5.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.0.0-alpha.9",
+    "mini-css-extract-plugin": "^1.2.1",
     "ts-loader": "^8.0.7",
     "typescript": "^4.0.5",
     "webpack": "^5.3.1",
     "webpack-cli": "^4.1.0",
-    "webpack-dev-middleware": "^4.0.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.9",
-    "@amcharts/amcharts4-fonts": "^4.0.1"
+    "@amcharts/amcharts4": "^4.10.9"
   }
 }
