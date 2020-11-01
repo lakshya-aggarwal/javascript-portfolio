@@ -44,7 +44,8 @@ lineSeries.strokeOpacity = 0;
 
 // Add a bullet
 let bullet = lineSeries.bullets.push(new am4charts.Bullet());
-bullet.tooltipText = "Color Intesity: {valueY}\n[bold font-size: 17px]Malic Acid: {valueX}[/]";
+bullet.tooltipText = `Color Intesity: {valueY}
+                      [bold font-size: 17px]Malic Acid: {valueX}[/]`;
 
 let hoverState = bullet.states.create("hover");
 hoverState.properties.scale = 1.7;
@@ -79,7 +80,10 @@ label.align = "right"
 label.toFront();
 
 reg.events.on("processed", function(ev) {
-  label.text = "[bold]Equation:[/] " + ev.target.result.string + "\n[bold]R² :[/] " + ev.target.result.r2;
+  let EQUATION_STRING = ev.target.result.string;
+  let EQUATION_R2 = ev.target.result.r2;
+  label.text = `[bold]Equation:[/] ${EQUATION_STRING} 
+                [bold]R² :[/] ${EQUATION_R2} `;
 });
 
 //scrollbars
